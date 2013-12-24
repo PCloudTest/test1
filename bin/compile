@@ -37,25 +37,25 @@ compile_buildpack_bin=$compile_buildpack_dir/bin
 
 # ------------------------------------------------------------------------------------------------
 
-# cd $compile_build_dir
+cd $compile_build_dir
 
-# # ------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------
 
-# echo "-----> Doing work with $(basename ${compile_nginx_download%.tar.gz}) son."
+echo "-----> Doing work with $(basename ${compile_nginx_download%.tar.gz}) son."
 # mkdir -p $compile_cache_dir/public
 # mv * $compile_cache_dir/public
 # mv $compile_cache_dir/public .
 # [[ -f public/Procfile ]] && mv public/Procfile .
-# curl -s --max-time 60 $compile_nginx_download |tar xz
+curl -s --max-time 60 $compile_nginx_download |tar xz
 
-# cp -f $compile_buildpack_dir/conf/nginx.conf nginx/conf/nginx.conf
-# cp -f $compile_buildpack_dir/conf/mime.types nginx/conf/mime.types
+cp -f $compile_buildpack_dir/conf/nginx.conf nginx/conf/nginx.conf
+cp -f $compile_buildpack_dir/conf/mime.types nginx/conf/mime.types
 
-# [[ -f public/nginx.conf ]] && mv public/nginx.conf nginx/conf/nginx.conf
-# [[ -f public/mime.types ]] && mv public/mime.types nginx/conf/mime.types
+[[ -f nginx.conf ]] && mv nginx.conf nginx/conf/nginx.conf
+[[ -f mime.types ]] && mv mime.types nginx/conf/mime.types
 
-# echo "-----> Ensuring manifest.yml & stackato.yml aren't available in public/"
-# rm -f public/{manifest,stackato}.yml
+echo "-----> Ensuring manifest.yml & stackato.yml aren't available in public/"
+rm -f {manifest,stackato}.yml
 
 # ------------------------------------------------------------------------------------------------
 cp $compile_buildpack_bin/boot.sh .
