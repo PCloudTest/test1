@@ -10,14 +10,14 @@
 # License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
 # either express or implied. See the License for the specific language governing permissions
 # and  limitations under the License.
-# ------------------------------------------------------------------------------------------------sss
+# ------------------------------------------------------------------------------------------------
 
 export APP_ROOT=$HOME
 
 conf_file=$APP_ROOT/nginx/conf/nginx.conf
-if [ -f $APP_ROOT/public/nginx.conf ]
+if [ -f $APP_ROOT/nginx.conf ]
 then
-  conf_file=$APP_ROOT/public/nginx.conf
+  conf_file=$APP_ROOT/nginx.conf
 fi
 
 mv $conf_file $APP_ROOT/nginx/conf/orig.conf
