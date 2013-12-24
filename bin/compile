@@ -48,8 +48,8 @@ echo "-----> Doing work with $(basename ${compile_nginx_download%.tar.gz}) son."
 
 curl -s --max-time 60 $compile_nginx_download |tar xz
 
-# cp -f $compile_buildpack_dir/conf/nginx.conf nginx/conf/nginx.conf
-# cp -f $compile_buildpack_dir/conf/mime.types nginx/conf/mime.types
+cp -f $compile_buildpack_dir/conf/nginx.conf nginx/conf/nginx.conf
+cp -f $compile_buildpack_dir/conf/mime.types nginx/conf/mime.types
 
 # [[ -f nginx.conf ]] && mv nginx.conf nginx/conf/nginx.conf
 # [[ -f mime.types ]] && mv mime.types nginx/conf/mime.types
