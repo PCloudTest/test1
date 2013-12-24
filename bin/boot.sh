@@ -11,14 +11,14 @@
 # either express or implied. See the License for the specific language governing permissions
 # and  limitations under the License.
 # ------------------------------------------------------------------------------------------------
-compile_nginx_download=https://d35wldypfbhn1h.cloudfront.net/nginx-1.4.1.tar.gz
+# compile_nginx_download=https://d35wldypfbhn1h.cloudfront.net/nginx-1.4.1.tar.gz
 
 # ------------------------------------------------------------------------------------------------
 
-compile_build_dir=$1
-compile_cache_dir=$2
-compile_buildpack_dir=$(cd $(dirname $0) && cd .. && pwd)
-compile_buildpack_bin=$compile_buildpack_dir/bin
+# compile_build_dir=$1
+# compile_cache_dir=$2
+# compile_buildpack_dir=$(cd $(dirname $0) && cd .. && pwd)
+# compile_buildpack_bin=$compile_buildpack_dir/bin
 
 #echo "pwd: $(pwd)"
 #echo "compile_build_dir: $compile_build_dir"
