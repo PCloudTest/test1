@@ -12,7 +12,7 @@
 # and  limitations under the License.
 # ------------------------------------------------------------------------------------------------
 
-export APP_ROOT=$HOME
+export APP_ROOT=/tmp/staged/app
 
 conf_file=$APP_ROOT/nginx/conf/nginx.conf
 if [ -f $APP_ROOT/nginx.conf ]
